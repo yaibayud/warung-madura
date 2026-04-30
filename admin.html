@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Warung Madura</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/admin.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="admin-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Admin <span class="highlight">Panel</span></h2>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="active"><i data-lucide="layout-dashboard"></i> Dashboard</a>
+                <a href="#"><i data-lucide="package"></i> Inventory</a>
+                <a href="#"><i data-lucide="shopping-bag"></i> Sales Log</a>
+                <a href="#"><i data-lucide="settings"></i> Settings</a>
+                <a href="/" class="btn-logout"><i data-lucide="log-out"></i> Keluar</a>
+            </nav>
+        </aside>
+
+        <main class="admin-main">
+            <header class="admin-header">
+                <div class="header-left">
+                    <h1>Dashboard Overview</h1>
+                </div>
+                <div class="header-right">
+                    <div class="admin-profile">
+                        <span>Bang Madura</span>
+                        <div class="avatar">BM</div>
+                    </div>
+                </div>
+            </header>
+
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #eef2ff; color: #4f46e5;">
+                        <i data-lucide="package"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Total Produk</h3>
+                        <p class="stat-value">14</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #fef2f2; color: #ef4444;">
+                        <i data-lucide="alert-triangle"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Low Stock</h3>
+                        <p class="stat-value">3</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #f0fdf4; color: #22c55e;">
+                        <i data-lucide="trending-up"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Sales Today</h3>
+                        <p class="stat-value">Rp 1.250.000</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="inventory-section">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Inventory Status</h2>
+                        <button class="btn btn-add">+ Tambah Produk</button>
+                    </div>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Nama Produk</th>
+                                    <th>Kategori</th>
+                                    <th>Harga</th>
+                                    <th>Status</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody id="inventoryTable">
+                                <!-- Table rows will be injected by JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script type="module" src="/admin.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

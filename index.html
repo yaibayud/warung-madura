@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warung Madura | Buka 24 Jam</title>
+    <meta name="description" content="Warung Madura Modern - Solusi kebutuhan harian Anda, buka 24 jam dengan pelayanan ramah dan stok lengkap.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-text">Warung <span class="highlight">Madura</span></span>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#hero">Beranda</a></li>
+                    <li><a href="#products">Produk</a></li>
+                    <li><a href="/admin.html" class="btn-admin">Admin Dashboard</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <div class="hero-text" data-aos="fade-up">
+                    <span class="badge">Buka 24 Jam</span>
+                    <h1>Kebutuhan Harian Lengkap di <span class="accent">Genggaman Anda</span></h1>
+                    <p>Dari sembako hingga pulsa, kami siap melayani Anda kapanpun dan dimanapun.</p>
+                    <div class="hero-ctas">
+                        <a href="#products" class="btn btn-primary">Belanja Sekarang</a>
+                        <a href="https://wa.me/628123456789" class="btn btn-secondary">Hubungi Kami</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="products" class="products-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Katalog Produk</h2>
+                    <div class="search-bar">
+                        <i data-lucide="search"></i>
+                        <input type="text" id="productSearch" placeholder="Cari beras, kopi, rokok...">
+                    </div>
+                </div>
+
+                <div class="category-filters" id="categoryFilters">
+                    <button class="filter-chip active" data-category="all">Semua</button>
+                    <button class="filter-chip" data-category="sembako">Sembako</button>
+                    <button class="filter-chip" data-category="rokok">Rokok</button>
+                    <button class="filter-chip" data-category="minuman">Minuman</button>
+                    <button class="filter-chip" data-category="sabun">Sabun</button>
+                    <button class="filter-chip" data-category="mie">Mie Instan</button>
+                </div>
+
+                <div class="product-grid" id="productGrid">
+                    <!-- Products will be injected by JS -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <h3>Warung Madura</h3>
+                    <p>Terpercaya melayani pelanggan dengan sepenuh hati sejak dulu.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigasi</h4>
+                    <ul>
+                        <li><a href="#hero">Beranda</a></li>
+                        <li><a href="#products">Produk</a></li>
+                        <li><a href="/admin.html">Admin</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Kontak</h4>
+                    <p><i data-lucide="map-pin"></i> Jl. Mawar No. 123, Jakarta</p>
+                    <p><i data-lucide="phone"></i> +62 812 3456 789</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Warung Madura Modern. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="cart-toast" class="toast hidden">
+        Produk berhasil ditambahkan ke keranjang!
+    </div>
+
+    <script type="module" src="/main.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
